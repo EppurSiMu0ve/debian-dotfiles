@@ -1,0 +1,57 @@
+# List of valid properties:
+# align				# color				# command
+# full_text			# instance			# interval
+# label				# min_width			# name
+# separator			# separator_block_width
+# short_text		# signal			# urgent
+
+# Global properties
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+command=~/.config/i3blocks/cmd/$BLOCK_NAME.sh
+separator_block_width=25
+markup=pango
+
+# Media player support
+[mediaplayer]
+interval=1
+signal=10
+#align=center
+separator=false
+#min_width=500
+
+# Key indicators
+# Add the following bindings to i3 config file:
+# bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
+# bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
+[keyindicator]
+interval=1
+signal=11
+
+# RAM usage monitoring
+[memory_used]
+interval=10
+min_width=70
+align=center
+
+# CPU usage monintoring
+[cpu_usage]
+interval=10
+min_width=70
+align=center
+
+# Network interface monitoring
+# If the instance is not specified, use the interface used for default route.
+# The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
+[iface]
+color=#00FF00
+interval=10
+
+# Date Time
+[time]
+interval=30
+
+# Volume indicator
+[volume]
+interval=once
+signal=10
